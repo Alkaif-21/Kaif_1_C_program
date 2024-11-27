@@ -4,6 +4,6 @@ return a + b;
 }
 int main(){
   int result=add(5, 10);
-  printf('sum=%d\n',result);
+  printf("sum=%d\n",result);
   return 0;
 }
