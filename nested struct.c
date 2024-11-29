@@ -1,21 +1,21 @@
-#include<stdio.h>
-struct employee{
+#include <stdio.h>
+struct address{
+    char city[50];
+    int pin;
+};
+struct person {
     char name[50];
-    int id;
-    float salary;
+    struct address addr;
 };
 int main(){
-    struct employee employees[2];
-    for (int i=0;i<2;i++){
-        printf("enter details for employee%d:\n",i + 1);
-        printf("salary:");
-        scanf("%s",employees[i].name);
-        printf("ID:");
-        scanf("%d",& employees[i].id);
-        }
-        printf("\nemployee details:\n");
-        for(int i=0;i<2;i++){
-            printf("name:%s,ID:%d,salary:%.2f\n",employees[i].name,employees[i].id,employees[i].salary);
-            }
-            return 0;
-            }
+    struct person p;
+    printf("enter name:");
+    scanf("%s",p.name);
+    printf("enter city:");
+    scanf("%s",p.addr.city);
+    printf("enter pin:");
+    scanf("%d",&p.addr.pin);
+    printf("\nperson details:\n");
+    printf("name:%s\ncity:%s\npin:%d\n",p.name,p.addr.city,p.addr.pin);
+    return 0;
+}
